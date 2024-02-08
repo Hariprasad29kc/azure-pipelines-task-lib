@@ -13,10 +13,12 @@ steps:
 - script: |
     npm install
   displayName: 'npm install'
+  workingDirectory: $(Build.SourcesDirectory)
 
 - script: |
     npm run build
   displayName: 'npm build'
+  workingDirectory: $(Build.SourcesDirectory)
 
 - task: CopyFiles@2
   inputs:
